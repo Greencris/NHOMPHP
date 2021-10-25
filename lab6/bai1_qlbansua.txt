@@ -1,0 +1,112 @@
+câu 1: Liệt kê danh sách hãng sữa gồm có tên hãng sữa, địa chỉ, điện thoại.
+	SELECT Ten_hang_sua, Dia_chi,Dien_thoai 
+	FROM `hang_sua`;
+
+Câu 2: Liệt kê danh sách khách hàng gồm có các thông tin sau: tên khách hàng, địa chỉ, điện thoại, danh sách
+sẽ được sắp theo thứ tự tên khách hàng tăng dần.
+	SELECT Ten_khach_hang,Dia_chi,Dien_thoai 
+	FROM `khach_hang` 
+	ORDER BY Ten_khach_hang ASC;
+
+câu 3:Liệt kê danh sách khách hàng gồm có các thông tin sau: tên khách hàng, phái, địa chỉ, điện thoại,
+danh sách sẽ được sắp theo thứ tự nam trước, nữ sau.
+	SELECT Ten_khach_hang,Phai,Dia_chi,Dien_thoai 
+	FROM `khach_hang` 
+	ORDER BY Phai ASC;
+	
+Câu 4: Liệt kê danh sách sữa gồm có: tên sữa, trọng lượng, đơn giá. Có sắp tăng theo cột tên sữa, và sắp
+giảm theo cột đơn giá
+	SELECT Ten_sua, Trong_luong,Don_gia 
+	FROM `sua` 
+	ORDER BY Ten_sua ASC, Don_gia DESC;
+	
+Câu 5: Liệt kê danh sách sữa gồm có: tên sữa, trọng lượng, đơn giá, thành phần dinh dưỡng. Chỉ liệt kê các
+sữa có tên bắt đầu là 'S'.
+	SELECT Ten_sua,Trong_luong,Don_gia,TP_Dinh_Duong 
+	FROM `sua` 
+	WHERE Ten_sua LIKE 'S%';
+	
+Câu 6: Liệt kê danh sách các hãng sữa có ký tự cuối cùng của mã hãng sữa là 'M', gồm có các thông tin sau:
+mã hãng sữa, tên hãng sữa, địa chỉ, điện thoại
+	SELECT Ma_hang_sua,Ten_hang_sua,Dia_chi,Dien_thoai
+	FROM `hang_sua` 
+	WHERE Ma_hang_sua LIKE '%M';
+	
+Câu 7: Liệt kê danh sách sữa mà trong tên sữa có từ 'grow'
+	SELECT * FROM `sua` 
+	WHERE Ten_sua LIKE '%grow%';
+	
+Câu 8:Liệt kê danh sách sữa có đơn giá lớn hơn 100.000 VNĐ, gồm các thông tin: tên sữa, đơn giá, trọng
+lượng, danh sách được xếp theo thứ tự tên sữa giảm dần.
+	SELECT Ten_sua,Don_gia,Trong_luong
+	FROM `sua` 
+	WHERE Don_gia > 100000
+	ORDER BY Ten_sua DESC;
+	
+Câu 9: Cho biết các sữa có mã loại sữa là 'SC' và có mã hãng sữa là 'VNM' gồm các thông tin sau: tên sữa,
+thành phần dinh dưỡng, lợi ích, trong đó tên sữa sắp theo thứ tự tăng dần
+	SELECT Ten_sua,TP_Dinh_Duong,Loi_ich 
+	FROM `sua` 
+	WHERE Ma_loai_sua ='SC' and Ma_hang_sua ='VNM'
+	ORDER BY Ten_sua ASC;
+	
+Câu 10: Liệt kê danh sách sữa có trọng lượng lớn hơn hay bằng 900 gr hoặc mã hãng sữa là 'DS'
+	SELECT * 
+	FROM `sua` 
+	WHERE Trong_luong >= 900 AND Ma_hang_sua ='DS';
+	
+Câu 11: Liệt kê danh sách các sữa có đơn giá từ 100.000 VNĐ đến 150.000 VNĐ
+	SELECT * FROM `sua` 
+	WHERE Don_gia BETWEEN 100000 AND 150000;
+	
+Câu 12:Liệt kê các sữa có mã hãng sữa là 'DM' hay 'DL' hay 'DS' và có trọng lượng lớn hơn hay bằng 800 gr,
+sắp tăng dần theo trọng lượng.
+	SELECT * FROM `sua` 
+	WHERE Ma_hang_sua  ='DM' OR Ma_hang_sua ='DL' OR Ma_hang_sua ='DS' AND Trong_luong >=800 
+	ORDER BY Trong_luong ASC;
+
+Câu 13:Liệt kê các sữa có mã loại là 'SD' hoặc có giá tiền nhỏ hơn hay bằng 12.000 VNĐ
+	SELECT * FROM `sua` 
+	WHERE Ma_loai_sua ='SD' OR Don_gia <=12000;
+	
+Câu 14: Liệt kê những khách hàng nam, và có họ tên bắt đầu là 'N'
+	SELECT * FROM `khach_hang` 
+	WHERE Phai = 0 AND Ten_khach_hang  LIKE 'N%';
+	
+Câu 15: Liệt kê tên các hãng sữa mà mã hãng sữa không có ký tự 'M'
+	SELECT Ten_hang_sua FROM `hang_sua` 
+	WHERE Ma_hang_sua NOT LIKE '%M%';
+	
+Câu 16: Liệt kê các sữa có thành phần dinh dưỡng chứa 'canxi' và 'vitamin', gồm các thông tin: tên sữa, thành
+phần dinh dưỡng.
+	SELECT Ten_sua,TP_Dinh_Duong FROM `sua` 
+	WHERE TP_Dinh_Duong LIKE '%vitamin%' AND TP_Dinh_Duong LIKE '%canxi%';
+
+Câu 17: Liệt kê các sản phẩm sữa có trọng lượng là 180gr, 200gr hoặc 900 gr
+	SELECT * FROM `sua` 
+	WHERE Trong_luong =180 OR Trong_luong = 200 OR Trong_luong = 900;
+	
+Câu 18: Liệt kê các sản phẩm sữa có trọng lượng không là 400gr, 800gr,900gr
+	SELECT * FROM `sua` 
+	WHERE NOT(Trong_luong =400 OR Trong_luong=800 OR Trong_luong = 900);
+	
+Câu 19: Cho biết tên sữa, đơn giá, thành phần dinh dưỡng của 10 sữa có đơn giá cao nhất
+	SELECT Ten_sua,Don_gia,TP_Dinh_Duong FROM `sua` 
+	ORDER BY Don_gia DESC LIMIT 10;
+	
+Câu 20: Cho biết 3 sản phẩm sữa của hãng Vinamilk có trọng lượng nặng nhất, gồm các thông tin: Tên sữa,
+trọng lượng
+	SELECT Ten_sua, Trong_luong FROM `sua` 
+	ORDER BY Trong_luong DESC LIMIT 3;
+	
+Câu 21: Liệt kê các sữa của hãng Vinamilk gồm các thông tin: tên sữa, lợi ích, đơn giá, trong đó đơn giá sắp
+giảm dần.
+	SELECT Ten_sua,Loi_ich,Don_gia FROM `sua`,`hang_sua`
+	WHERE sua.Ma_hang_sua = hang_sua.Ma_hang_sua AND hang_sua.Ten_Hang_Sua ='Vinamilk'
+	ORDER BY Don_gia DESC;
+	
+Câu 22: Liệt kê danh sách các sữa của hãng Abbott có: tên sữa, trọng lượng, lợi ích, trong đó trọng lượng sắp
+tăng dần.
+	SELECT Ten_sua,Trong_luong,Loi_ich FROM `sua`,`hang_sua`
+	WHERE sua.Ma_hang_sua = hang_sua.Ma_hang_sua AND hang_sua.Ten_Hang_Sua ='Abbott'
+	ORDER BY Trong_luong ASC;

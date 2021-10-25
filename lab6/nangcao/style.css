@@ -1,0 +1,66 @@
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.7em;
+	letter-spacing: 1px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #161d1e;
+    background: #7086cf;
+}
+#templatemo_menu {
+	height: 59px;
+	background: url(hinh_nv/3.jpg) no-repeat center top;
+}
+
+#templatemo_menu ul {
+	width: 590px;
+	margin: 0 auto;
+	padding: 0px;
+	list-style: none;
+}
+
+#templatemo_menu ul li {
+	padding: 0px;
+	margin: 0px;
+	display: inline;
+}
+
+#templatemo_menu ul li a {
+	position: relative;
+	float: left;
+	width: 100px;
+	display: block;
+	height: 35px;
+	padding: 14px 8px 0 0;
+	margin-right: 10px;
+	text-align: center;
+	font-size: 14px;
+	text-decoration: none;
+	color: #c9d3da;	
+	font-weight: bold;
+	outline: none;
+}
+
+#templatemo_menu ul li a span {
+	position: absolute;
+	width: 8px;
+	height: 49px;
+	left: -8px;
+	top: 0;
+	background: url(images/templatemo_menu_btn_left.png) no-repeat left top;
+}
+
+#templatemo_menu li a:hover, #templatemo_menu li .current {
+	color: #ffffff;
+	background: url(images/templatemo_menu_btn__hover_right.png) no-repeat right top;
+}
+
+#templatemo_menu li a:hover span, #templatemo_menu li .current span {
+	position: absolute;
+	width: 8px;
+	height: 49px;
+	left: -8px;
+	top: 0;
+	background: url(images/templatemo_menu_btn__hover_left.png) no-repeat left top;
+}
