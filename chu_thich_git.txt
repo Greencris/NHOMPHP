@@ -1,0 +1,11 @@
+*trường hợp làm chung nhìu người và muốn push code lên cùng project(phải tạo brank)
+lúc đầu: git clone duong dan //chỉ clone đường dẫn 1 lần(dg dan lấy từ https)
+b1: git pull origin master (lấy tất cả các code mới trên github)
+b2: git checkout -b "tên branch" // tạo branch mới
+b3: khi đã làm xong thì git add .  -> git commit -m "nội dung" 
+b4: git checkout master (đẻ chuyển qua branch master)
+b5: git pull origin master (lấy code mới về trong trường hợp có thể có ng khác đang push code lên)
+b6: git merge "tên branch đã tạo"
+b7: git push origin master 
+b8: git branch //nếu muốn ktra các branch 
+b9: git branch -d "tên branch đã tạo" //xóa branch nếu muốn 

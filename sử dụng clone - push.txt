@@ -1,0 +1,124 @@
+
+dien0@DESKTOP-UC6J2G1 MINGW64 ~/OneDrive/Máy tính/githup/baiTapPHP (master)
+$ git add .
+
+
+dien0@DESKTOP-UC6J2G1 MINGW64 ~/OneDrive/Máy tính/githup/baiTapPHP (master)
+$ git commit -m "first commit"
+[master (root-commit) ad099e6] first commit
+ 6 files changed, 143 insertions(+)
+ create mode 100644 lab2/bai1/index.php
+ create mode 100644 lab2/bai2/index.php
+ create mode 100644 lab2/bai3/index.php
+ create mode 100644 lab2/bai4/index.php
+ create mode 100644 lab2/bai5/index.php
+ create mode 100644 lab2/bai5/soNT.txt
+
+dien0@DESKTOP-UC6J2G1 MINGW64 ~/OneDrive/Máy tính/githup/baiTapPHP (master)
+$ git push
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (14/14), 2.03 KiB | 18.00 KiB/s, done.
+Total 14 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Nguyenthidien60135259/baiTapPHP.git
+ * [new branch]      master -> master
+
+dien0@DESKTOP-UC6J2G1 MINGW64 ~/OneDrive/Máy tính/githup/baiTapPHP (master)
+$ git push
+Everything up-to-date
+
+dien0@DESKTOP-UC6J2G1 MINGW64 ~/OneDrive/Máy tính/githup/baiTapPHP (master)
+$ git ^C
+
+dien0@DESKTOP-UC6J2G1 MINGW64 ~/OneDrive/Máy tính/githup/baiTapPHP (master)
+$ git commit -m "first commit"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        lab3/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dien0@DESKTOP-UC6J2G1 MINGW64 ~/OneDrive/Máy tính/githup/baiTapPHP (master)
+$ git pust
+git: 'pust' is not a git command. See 'git --help'.
+
+The most similar command is
+        push
+
+dien0@DESKTOP-UC6J2G1 MINGW64 ~/OneDrive/Máy tính/githup/baiTapPHP (master)
+$ git push
+Everything up-to-date
+
+dien0@DESKTOP-UC6J2G1 MINGW64 ~/OneDrive/Máy tính/githup/baiTapPHP (master)
+$ $ git commit -m "first commit"
+bash: $: command not found
+
+dien0@DESKTOP-UC6J2G1 MINGW64 ~/OneDrive/Máy tính/githup/baiTapPHP (master)
+$ git add .
+
+dien0@DESKTOP-UC6J2G1 MINGW64 ~/OneDrive/Máy tính/githup/baiTapPHP (master)
+$ git push
+Everything up-to-date
+
+dien0@DESKTOP-UC6J2G1 MINGW64 ~/OneDrive/Máy tính/githup/baiTapPHP (master)
+$ git commit -m "first commit"
+[master 1f77d9a] first commit
+ 9 files changed, 814 insertions(+)
+ create mode 100644 lab3/DTHCN.php
+ create mode 100644 lab3/bai1/dthcn.php
+ create mode 100644 lab3/bai2/thanhtoantiendien.php
+ create mode 100644 lab3/bai3/index.php
+ create mode 100644 lab3/bai3/tinh1.php
+ create mode 100644 lab3/bai4/nhaptt.html
+ create mode 100644 lab3/bai4/xuly.php
+ create mode 100644 lab3/baitapform.php
+ create mode 100644 lab3/dthtron.php
+
+dien0@DESKTOP-UC6J2G1 MINGW64 ~/OneDrive/Máy tính/githup/baiTapPHP (master)
+$ git push
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (16/16), 6.36 KiB | 542.00 KiB/s, done.
+Total 16 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/Nguyenthidien60135259/baiTapPHP.git
+   ad099e6..1f77d9a  master -> master
+
+
+
+
+Xóa thư mục hoặc file trên github
+https://www.youtube.com/watch?v=eKmsm9lhgfs
+
+tham khảo thêm cái xóa nữa
+https://www.it-swarm-vi.com/vi/git/lam-nao-toi-co-xoa-mot-tap-tin-tu-git-repo/968734597/
+
+
+
+Chú thích: dùng terminal-> new terminal
+*trường hợp khi có thay đổi và muốn push code lên 
+Muốn push code lên:
+B1: git add . 
+b2: git commit -m "nội dung" //"nội dung" là chú thích khi push lên github
+b3:git pull origin master //tải code mới về để khi up lên không bị mất code của người khác
+b4:git push origin master //push code mình muốn đưa lên
+
+*trường hợp làm chung nhìu người và muốn push code lên cùng project(phải tạo brank)
+lúc đầu: git clone duong dan //chỉ clone đường dẫn 1 lần(dg dan lấy từ https)
+b1: git pull origin master (lấy tất cả các code mới trên github)
+b2: git checkout -b "tên branch" // tạo branch mới
+b3: khi đã làm xong thì git add .  -> git commit -m "nội dung" 
+b4: git checkout master (đẻ chuyển qua branch master)
+b5: git pull origin master (lấy code mới về trong trường hợp có thể có ng khác đang push code lên)
+b6: git merge "tên branch đã tạo"
+b7: git push origin master 
+b8: git branch //nếu muốn ktra các branch 
+b9: git branch -d "tên branch đã tạo" //xóa branch nếu muốn 
+
